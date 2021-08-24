@@ -1,10 +1,10 @@
-def dfs(p,q):
+def gcd(p,q):
     while q:
         p,q = q,p%q
     return p
 
 def isCoprime(p,q):
-    return ( dfs(p,q) == 1)
+    return ( gcd(p,q) == 1)
 
 def isPrime(n):
     if n>1:
