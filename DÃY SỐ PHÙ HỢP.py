@@ -17,9 +17,7 @@ while(T):
 
     T -= 1
 
-    # for i in range (0,n):
-#     arr_1[i] = int(arr_1[i])
-    #     arr_2[i] = int(arr_2[i])
+
 
 
 

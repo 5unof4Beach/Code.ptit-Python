@@ -15,5 +15,5 @@ for i in range(0,n):
 arr.sort()
 for i in arr:
     for j in arr:
-        if(isCoprime(i,j) and i<j):
+        if(isCoprime(i,j) and i<j): # i phai nho hon j thi moi in ra
             print(i,j)
