@@ -16,7 +16,7 @@ while k :
     print("")
 
     inp = input()
-    if(inp == '0'):
+    if(inp == '0'): # neu nhap vao chi co mot so khong
         break
     else:
         arr = inp.split()
