@@ -24,7 +24,8 @@ while(n != 0 ): #neu nhap vao toan khong thi thoat vong lap
             arr_1[i] = q.pop(0)
     print(c)
 
-    line_1 = input()                #nhap case moi
+    # nhap case moi
+    line_1 = input()
     arr_1 = line_1.split()
     tmp = len(arr_1)
     for i in range(0, tmp):
