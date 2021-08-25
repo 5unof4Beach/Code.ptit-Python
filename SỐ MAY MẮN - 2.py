@@ -10,4 +10,4 @@ while test > 0:
     if check == 1:
         print("YES")
     else:
-        print("NO")
+        print("NO") #comment
