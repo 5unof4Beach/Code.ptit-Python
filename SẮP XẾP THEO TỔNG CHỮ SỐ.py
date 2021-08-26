@@ -15,6 +15,8 @@ while t:
 
     for i in nhap:
         arr.append(int(i))
+
+    # phai sap xep neu so co cung tong thi xep so nho hon len truoc
     arr.sort()
 
     hash = dict()
