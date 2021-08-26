@@ -13,6 +13,7 @@ while(temp <= arr[2]):
         break
     if ( arr[1]*c - arr[0] > 0 ):
         res.append(arr[1]*c - arr[0] )
+    # phai dat c duoi nay
     c += 1
 
 if(len(res)==0):
