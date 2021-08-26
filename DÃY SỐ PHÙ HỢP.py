@@ -4,7 +4,7 @@ while (T):
     n = int(input())
     line_1, line_2 = input(), input()
     arr_1, arr_2 = line_1.split(), line_2.split()
-    flag = 11
+    flag = 1
     for i in range(0,n):
         arr_1[i] = int(arr_1[i])
         arr_2[i] = int(arr_2[i])
