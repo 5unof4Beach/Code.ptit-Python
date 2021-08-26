@@ -2,68 +2,33 @@ t = int(input())
 while(t):
     t-=1
 
-    line = input().split()
+    line = input()
+    line = line.split()
     n1,n2,n3 = int(line[0]),int(line[1]),int(line[2])
     arr1,arr2,arr3 = input(),input(),input()
     arr1 = arr1.split()
     arr2 = arr2.split()
     arr3 = arr3.split()
+    for i in range(0,len(arr1)): arr1[i] = int(arr1[i])
+    for i in range(0, len(arr2)): arr2[i] = int(arr2[i])
+    for i in range(0, len(arr3)): arr3[i] = int(arr3[i])
 
-    arr1_rep = arr1
-    for i in range(0,len(arr1_rep)): arr1_rep[i] = int(arr1_rep[i])
-    arr2_rep = arr2
-    for i in range(0, len(arr2_rep)): arr2_rep[i] = int(arr2_rep[i])
-    arr3_rep = arr3
-    for i in range(0, len(arr3_rep)): arr3_rep[i] = int(arr3_rep[i])
-
-
-    arr1,arr2,arr3 = set(arr1),set(arr2),set(arr3)
-
-    hash = dict()
-
-    for i in arr1:
-        if i in hash:
-            hash[i] += 1
-        else:
-            hash[i] = 1
-
-    for i in arr2:
-        if i in hash:
-            hash[i] += 1
-        else:
-            hash[i] = 1
-
-    for i in arr3:
-        if i in hash:
-            hash[i] += 1
-        else:
-            hash[i] = 1
+    i,j,k = 0,0,0
     flag = 1
-    res = []
-    for key in hash:
-        if hash[key] == 3:
-            res.append(int(key))
+    while(i<n1 and j<n2 and k<n3):
+        if (arr1[i]==arr2[j] and arr2[j]==arr3[k]):
             flag = 0
-    if flag == 0:
-        res.sort()
-        for i in res:
-            c1,c2,c3= 0,0,0
-            flag_2 = 1
-            for j in arr1_rep:
-                if i == j: c1 += 1
-            for j in arr2_rep:
-                if i == j: c2 += 1
-            if c1 == c2:
-                for j in arr3_rep:
-                    if i == j: c3 += 1
-                if c1 == c3:
-                    flag_2 = 0
-                    for k in range(0,c3):
-                        print(i,"",end="")
-            if flag_2:
-                print(i,"",end="")
-    else: print("NO",end="")
+            print(arr1[i],"",end="")
+            i += 1
+            j += 1
+            k += 1
+        elif arr1[i] < arr2[j]:
+            i += 1
+        elif arr2[j] < arr3[k]:
+            j += 1
+        else:
+            k += 1
+    if flag:
+        print("NO",end="")
     print("")
-
-
 
