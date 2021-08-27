@@ -1,21 +1,23 @@
 import math
 
+
+def isPrime(n):
+    n = int(n)
+    if n < 2 : return 0
+    for i in range( 2 , int(n/2)+1):
+        if(n % i == 0): return 0
+    return 1
+
 line = input();
 line = line.split()
 row,col = int(line[0]),int(line[1])
-line = input()
-line = line.split()
+mat = []
 
-def isPrime(n):
-    if n<2:return 0
-    for i in range(2, int(math.sqrt(n))):
-        if n % i == 0:
-            return 0
-    return 1
-
-for i in range(0,len(line)):
-    line[i] = isPrime(int(line[i]))
-print(line)
-
-# for i in range(0,row):
-#     for j in range(0,col):
+for i in range(0,row):
+    temp = input()
+    mat.insert(i,temp) #insert( pos , value )
+    mat[i] = mat[i].split()
+    for j in mat[i]:
+        j = isPrime(j)
+        print(j,"",end="")
+    print("")
