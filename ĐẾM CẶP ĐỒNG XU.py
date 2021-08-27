@@ -22,8 +22,3 @@ for i in range(0,n):
     sum += math.comb(count,2)
 
 print(sum)
-
-# print(mat)
-#
-# i = math.comb(4,2)
-# print(i)
