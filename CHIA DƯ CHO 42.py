@@ -1,8 +1,14 @@
-line = input()
-line = line.split()
+count = 0
 arr = []
-for i in line:
-    arr.append( int(i) % 42 )
+while count<10:
+    line = input()
+    line = line.split()
+    for i in line:
+        count += 1
+        arr.append(int(i) % 42)
+
+# print(line)
+
 c=0
 hash = dict()
 for i in arr:
@@ -13,8 +19,5 @@ for i in arr:
 
 for key in hash:
     c += 1
-print("")
-print(c)
-# arr = set(arr)
 # print("")
-# print(len(arr))
+print(c)
