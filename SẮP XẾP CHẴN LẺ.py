@@ -1,19 +1,26 @@
 n = int(input())
-line = input()
-line = line.split()
-for i in range( 0, n):
-    line[i] = int(line[i])
+# line = input()
+count = 0
+arr = []
+while count<n:
+    line = input()
+    line = line.split()
+    for i in line:
+        count += 1
+        arr.append(int(i))
+
+
 
 hash = dict()
 arr_le , arr_chan = [],[]
 
 for i in range(0,n):
-    if(line[i] % 2 ==0):
+    if(arr[i] % 2 ==0):
         hash[i] = 0
-        arr_chan.append(line[i])
+        arr_chan.append(arr[i])
     else:
         hash[i] = 1
-        arr_le.append(line[i])
+        arr_le.append(arr[i])
 
 arr_chan.sort()
 arr_le.sort(reverse=True)
@@ -22,11 +29,12 @@ temp_chan = 0
 temp_le = 0
 for j in hash:
     if(hash[j] == 0):
-        line[j] = arr_chan[temp_chan]
+        arr[j] = arr_chan[temp_chan]
         temp_chan += 1
     else:
-        line[j] = arr_le[temp_le]
+        arr[j] = arr_le[temp_le]
         temp_le += 1
 
-for i in line:
-    print(i," ",end="")
+print("")
+for i in arr:
+    print(i,"",end="")
