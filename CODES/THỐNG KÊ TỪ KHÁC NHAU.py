@@ -6,8 +6,15 @@ while n:
     n-=1
     line = input().lower()
     temp = []
+
     #loc tu trong cau
-    temp = re.findall(r"[\w']+",line)
+    specialChar = re.compile('\W')
+
+    #laai bo di cac ky yu dac biet va chi de lai dau cach
+    temp = re.sub(specialChar,' ',line)
+
+    temp = temp.split()
+    # temp = re.findall(r"[\w']+",line)
     for i in temp:
         sentence.append(i)
 
