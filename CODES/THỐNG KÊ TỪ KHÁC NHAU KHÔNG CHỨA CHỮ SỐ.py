@@ -7,7 +7,7 @@ while n:
     nhap = input().lower()
     temp = []
     #loai bo cac chu so trong chuoi
-    line = ''.join([i for i in nhap if not i.isdigit()])
+    line = ''.join(i for i in nhap if not i.isdigit())
 
     #loc tu trong cau
     specialChar = re.compile('\W')
