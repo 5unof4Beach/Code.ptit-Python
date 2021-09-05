@@ -1,6 +1,9 @@
 #https://stackoverflow.com/questions/1059559/split-strings-into-words-with-multiple-word-boundary-delimiters
 import re
-n = int(input())
+line = input()
+line = line.split()
+n = int(line[0])
+k = int(line[1])
 sentence = []
 while n:
     n-=1
@@ -32,4 +35,5 @@ for i in sentence:
 hash_sorted = sorted(hash.items(), key = lambda x:x[1],reverse=True)
 
 for i in hash_sorted:
-    print(i[0],i[1])
+    if(i[1] >= k):
+        print(i[0],i[1])
