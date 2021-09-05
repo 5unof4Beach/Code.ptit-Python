@@ -31,8 +31,8 @@ for i in range(2,lim):
         pos += 1
     for j in range(i**2,lim,i):
         num[j] = 0
-print(num)
-print(prime)
+# print(num)
+# print(prime)
 # res =[]
 # for i in lst:
 #     if i < 2:
