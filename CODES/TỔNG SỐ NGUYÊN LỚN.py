@@ -16,34 +16,19 @@ arr2.append(0)
 # print(arr1)
 # print(arr2)
 res = []
-remember = False;
+remember = 0;
 temp = 0;
 # if(len (arr1) < len(arr2)):
 for i in range(len(arr1)):
-    temp = arr1[i] + arr2[i];
-    if remember:
-        res.append((temp + 1) % 10 )
-        if temp + 1 > 9:
-            remember = True
-        else:
-            remember = False
-    else:
-        res.append(temp % 10)
-        if temp > 9:
-            remember = True
-        else:
-            remember = False
+    temp = arr1[i] + arr2[i] + remember
+    res.append( temp % 10)
+    remember = temp // 10
 
 for i in range(len(arr1) , len(arr2)):
-    if remember:
-        if(arr2[i]+1 > 9):
-            res.append((arr2[i]+1) % 10)
-            remember = True
-        else:
-            res.append(arr2[i] + 1)
-            remember = False
-    else:
-        res.append(arr2[i] % 10)
+    temp = arr2[i] + remember
+    res.append(temp % 10)
+    remember = temp // 10
+
 # print(res)
 # kien tra xem kqua co bang 0 khong
 def allZero(list):
@@ -58,9 +43,15 @@ def allZero(list):
 
 
 res.reverse()
-if(res[0] == 0):
-    res.pop(0)
+#loai bo tat ca so 0 o dau
+pos = 0
+for i in range(0,len(res)):
+    if res[i] != 0:
+        pos = i
+        break
+res = res[pos:]
 
+# print(res)
 if allZero(res):
     print(0)
 else:
