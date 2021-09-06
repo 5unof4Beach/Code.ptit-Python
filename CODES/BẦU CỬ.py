@@ -10,16 +10,16 @@ for i in line:
         hash[i] = 1
 
 hash_sorted = sorted(hash.items(), key = lambda x:x[1], reverse=True)
-# print(hash_sorted)
+
 allEqual = 1
+
+#kiem tra xem so phieu bau co bang nhau hay khong
 max = max(hash.values())
-# print(max)
 for key in hash:
     if hash[key] != max:
         allEqual = 0
         break
 
-# print(hash_sorted)
 if allEqual:
     print("NONE")
 else:
