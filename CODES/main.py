@@ -87,16 +87,72 @@
 # print(sum)
 
 #Bai 5
-print("Bai 5")
-line = [1,5,4,6,7,2,3,8]
-# for i in range(len(line)):
-#     line[i] = line[i]**2
-line = [i**2 for i in line]
-line.sort(reverse=True)
-print(line)
+# print("Bai 5")
+# line = [1,5,4,6,7,2,3,8]
+# # for i in range(len(line)):
+# #     line[i] = line[i]**2
+# line = [i**2 for i in line]
+# line.sort(reverse=True)
+# print(line)
 
 #Bai 6
-print("Bai 6")
-arr = [1,"a",34,"a","b",1,"c"]
-arr=set(arr)
-print(len(arr))
+# print("Bai 6")
+# arr = [1,"a",34,"a","b",1,"c"]
+# arr=set(arr)
+# print(len(arr))
+
+# 06/09/2021
+
+# #Bai 1:
+# lst = [1,5,1,8,4,1,4,3,2,8,4,9]
+# count = [0] * (max(lst) + 1)
+# for i in lst:
+#     count[i] += 1
+# for i in range(len(count)):
+#     if(count[i] >= 3):
+#         print(i,"",end="")
+
+#Bai 5:
+# import math
+#
+# print("Bai 5 :")
+# dat = ("www.z.com","www.fb.org","www.sap.net","www.yt.in")
+# res = []
+# for i in dat:
+#     lst = i.split(".")
+#     res.append(lst[-1])
+# print(res)
+#
+# #Bai 6:
+# print("Bai 6 :")
+# lst = [('a',23),('b',37),('c',11),('d',29)]
+# lst_sorted = sorted(lst,key = lambda x:x[1])
+# print(lst_sorted)
+
+#Bai 3:
+import math
+
+def isPrime(n):
+    if  n < 2: return 0
+    for i in range(2,int(math.sqrt(n)+1)):
+        if n % i == 0: return 0
+    return 1
+
+lst = (1,2,3,4,5,6,7,8,9,10)
+c = 0
+for i in lst:
+    if isPrime(i):
+        print(i,"",end="")
+        c += 1
+print("")
+print(c)
+
+#bai 4:
+arr = [1,2,3]
+sum = 0
+res = []
+for i in arr:
+    sum += i
+    res.append(sum)
+print(res)
+
