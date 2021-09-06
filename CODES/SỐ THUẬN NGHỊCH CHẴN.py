@@ -1,5 +1,23 @@
-n = int(input())
-temp = str(n)
-no_of_digit = len(temp) #dem so cac chu so
-list = [2,4,6,8,22,24,26,28,42,44,46,48,62,64,66,68,82,84,86,88,222,224,226,228]
+t = int(input())
+while t:
+    t -= 1
+
+    n = int(input())
+    for i in range(22,n,22):
+        count = 0 # so cac chu so
+        flag = 1
+        num = 0 # so nghich dao
+        m = i
+        while m > 0:
+            temp = m % 10
+            count += 1
+            if temp % 2 != 0:
+                flag = 0
+                break
+            num = num*10 + temp
+            m //= 10
+        if flag and count % 2 == 0 and num == i:
+            print(i,end=" ")
+    print("")
+
 
