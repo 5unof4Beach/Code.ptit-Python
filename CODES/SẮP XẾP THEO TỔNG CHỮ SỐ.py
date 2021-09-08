@@ -1,12 +1,13 @@
 t = int(input())
+
+def tong(num):
+    res = 0
+    for i in str(num):
+        res += int(i)
+    return res
+
 while t:
     t -= 1
-    def tong(num):
-        res = 0
-        for i in str(num):
-            res += int(i)
-        return res
-
 
     n = int(input())
     arr = []
@@ -23,8 +24,6 @@ while t:
     for i in arr:
         hash[int(i)] = tong(i)
     # print(hash)
-
-    # https://careerkarma.com/blog/python-sort-a-dictionary-by-value/
     hash_sorted = sorted(hash.items(), key = lambda x:x[1],reverse=False)
 
     for i in hash_sorted:
