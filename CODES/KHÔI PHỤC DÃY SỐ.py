@@ -1,6 +1,6 @@
 n = int(input())
 arr = []
-if(n == 2): # trường hợp ma trận 2x2
+if n == 2: # trường hợp ma trận 2x2
     while n:
         n -= 1
         line = input()
