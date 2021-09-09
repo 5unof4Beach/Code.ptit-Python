@@ -10,7 +10,7 @@ while t:
     #loai bo so khong o dau
     for j in line:
         res.append(int(j))
-        
+
 res.sort()
 for i in res:
     print(i)
