@@ -22,6 +22,7 @@ def DRM(str):
     for i in range(len(str1)):
         res += sample[(sample.find(str1[i]) + sample.find(str2[i])) % 26]
     print(res)
+    
 n = int(input())
 while n:
     n-=1
