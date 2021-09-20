@@ -1,19 +1,17 @@
-lst = [15,4,5,6,7,200,50]
-print("Bai 3 :")
-for i in lst:
-    if i <= 150:
-        if i % 5 == 0:
-            print(i)
+print("Bai 11")
+line = "he did a a a nothing except camp out where he was told to go and he he father a few children"
+word = dict()
+line = line.split()
+for i in line:
+    if i in word:
+        word[i] += 1
     else:
-        break
+        word[i] = 1
+res = sorted(word.items(), key = lambda x:x[1],reverse=True)
+for i in res:
+    if i[1]>3:
+        print(i)
 
-print("Bai 4:")
-n = int(input())
-if( n == 1):
-    print(n,"st",sep="")
-elif( n == 2):
-    print(n,"nd",sep="")
-if( n == 3):
-    print(n,"rd",sep="")
-else:
-    print(n,"th",sep="")
+print("Bai 12")
+# res = sorted(word.values(), key = lambda x:x[1],reverse=True)
+print(res[0],res[-1])
