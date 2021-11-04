@@ -1,13 +1,23 @@
-from Person import Person
-from Student import Student
-from Rectangle import Rectangle
+s = input().split()
+r = int(s[0])
+c = int(s[1])
+a = [[int(j) for j in input().split()] for i in range(r)]
 
-r = Rectangle(10, 2)
-r.cal_s()
-r.cal_p()
+maxN = -100000000
 
-print()
+for i in range(r):
+    temp = max(a[i])
+    if temp > maxN:
+        maxN = temp
+done = False
+for i in range(r):
+    for j in range(c):
+        if a[i][j] == maxN:
+            print(i,j)
+            done = True
+            break
+    if done:
+        break
 
-s = Student("Duc Bui", "Nam", "30/02/2001", "B19DCCN186", 3.9, "B19CN186@gmail.com")
-s.description_student()
-s.check_scholarship()
+
+
